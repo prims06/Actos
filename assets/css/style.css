@@ -1,18 +1,352 @@
-/* Error: expected selector.
- *    ,
- * 12 | git commit -m "first commit"
- *    |               ^
- *    '
- *   scss\pages\_accueil.scss 12:15  @import
- *   scss\global.scss 5:9            root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected selector.\a    \2577 \a 12 \2502  git commit -m "first commit"\d\a    \2502                ^\a    \2575 \a   scss\\pages\\_accueil.scss 12:15  @import\a   scss\\global.scss 5:9            root stylesheet';
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&family=Open+Sans&family=Playfair+Display&family=Roboto:wght@300;400&display=swap");
+.titre-global {
+  font-family: Comfortaa, sans-serif;
+  text-align: center;
+  font-size: 70px;
+  padding: 0 25px 20px;
 }
+
+@media screen and (max-width: 1100px) {
+  .titre-global {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .titre-global {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .titre-global {
+    font-size: 35px;
+    padding: 10px 5px;
+  }
+}
+.container-cta, .container-faq, .container-boxs, .accueil, nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+p {
+  font-family: Montserrat, sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+}
+
+nav li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: relative;
+  top: 5px;
+  background: #000;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.lien-essai {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  color: #fff;
+  background: linear-gradient(45deg, #8a56eb, rgb(50, 151, 168));
+}
+
+.responsive-nav-btn {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.active-nav {
+  display: flex;
+}
+
+@media screen and (max-width: 950px) {
+  .responsive-nav-btn {
+    display: block;
+  }
+  nav {
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    position: absolute;
+    top: -5px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    display: none;
+  }
+  nav ul li {
+    height: 70px;
+    line-height: 70px;
+  }
+  nav a:hover::after {
+    display: none;
+  }
+  .lien-essai {
+    display: none;
+  }
+  .logo {
+    padding-left: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+  }
+  .accueil {
+    padding: 100px 0 0;
+    height: 700px;
+  }
+}
+.container-global {
+  padding-bottom: 400px;
+}
+
+.accueil {
+  width: 100%;
+  height: 900px;
+  flex-direction: column;
+  padding: 50px 0 75px;
+}
+
+.sous-titre {
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 20px;
+  line-height: 1.2;
+}
+
+.accueil img {
+  width: 1000px;
+}
+
+@media screen and (max-width: 1100px) {
+  .accueil {
+    padding: 70px 0 0;
+    height: 700px;
+  }
+  .accueil img {
+    width: 700px;
+  }
+  .sous-titre {
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .accueil {
+    padding: 150px 0px 50px;
+    height: 500px;
+  }
+  .accueil img {
+    width: 500px;
+  }
+  .sous-titre {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sous-titre {
+    font-size: 14px;
+  }
+}
+.container-performances {
+  padding: 120px 20px 170px;
+  margin-bottom: 100px;
+  background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%), linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%, rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%, rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%, rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%, rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%, rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%, rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%, rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
+  clip-path: polygon(0 0, 100% 17%, 100% 100%, 0 80%);
+}
+
+.separation {
+  margin: 0 auto 70px;
+  height: 2px;
+  border: none;
+  width: 300px;
+  border-radius: 3px;
+  background: #000;
+}
+
+.container-boxs {
+  width: 100%;
+}
+
+.box {
+  margin: 0 50px;
+}
+
+.box p {
+  text-align: center;
+}
+
+.nombre-clients {
+  font-size: 85px;
+  padding-bottom: 10px;
+}
+
+.type-de-clients {
+  font-size: 30px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.info-clients {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .nombre-clients {
+    font-size: 55px;
+  }
+  .type-de-clients {
+    font-size: 24px;
+  }
+  .info-clients {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container-boxs {
+    flex-direction: column;
+  }
+  .box {
+    margin-bottom: 30px;
+  }
+  .nombre-clients {
+    font-size: 40px;
+  }
+  .type-de-clients {
+    font-size: 20px;
+  }
+  .info-clients {
+    font-size: 12px;
+  }
+}
+.container-faq {
+  width: 70%;
+  max-width: 900px;
+  min-width: 300px;
+  height: auto;
+  margin: 10px auto 150px;
+  flex-direction: column;
+}
+
+.questions {
+  width: 100%;
+  height: auto;
+  margin: 5px;
+}
+
+.panneau {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 10px;
+  position: relative;
+  z-index: 100;
+}
+
+.titre-question {
+  margin-left: 10px;
+  padding: 15px 5px;
+  font-size: 25px;
+}
+
+.panneau img {
+  margin-right: 10px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.toggle-pannel {
+  padding: 0 15px;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-pannel h4 {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+.toggle-pannel p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.container-cta {
+  padding: 100px 20px 170px;
+  margin-bottom: 100px;
+  flex-direction: column;
+  background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%), linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%, rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%, rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%, rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%, rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%, rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%, rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%, rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 100%);
+}
+
+.txt-cta {
+  text-align: center;
+  font-size: 20px;
+}
+
+.btn-appel {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px 50px;
+  background: #8a56eb;
+  border-radius: 50px;
+  margin: 50px 0 0;
+}
+
+/*# sourceMappingURL=style.css.map */
