@@ -22,7 +22,7 @@
     padding: 10px 5px;
   }
 }
-.container-cta, .container-faq, .container-boxs, .accueil, nav ul {
+footer ul, footer, .container-cta, .container-faq, .container-boxs, .accueil, nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -347,6 +347,38 @@ nav a:hover::after {
   background: #8a56eb;
   border-radius: 50px;
   margin: 50px 0 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  border-top: 1px dashed #000;
+  background: #f1f1f1;
+  color: #333;
+  flex-direction: column;
+}
+
+.bloc {
+  width: 300px;
+  margin: 0 30px;
+}
+
+.footer-medias h3 {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+footer ul img {
+  width: 40px;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
