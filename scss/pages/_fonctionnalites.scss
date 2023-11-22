@@ -1,0 +1,89 @@
+.titre-fonctionnalites{
+  padding: 130px 0 20px;
+}
+
+.sous-titre-fonctionnalites{
+  text-align: center;
+  font-size: 24px;
+}
+
+.container-btn-accueil{
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+.btn-fonctionnalites{
+  @extend %btn-app
+}
+.outline{
+  border: 2px solid $main-violet;
+  background: transparent;
+  color: $main-violet;
+}
+
+.container-fonctionnalites{
+  margin: 125px auto 200px;
+  width: 90%;
+  min-width: 300px;
+  max-width: 1700px;
+  @extend %flex-center;
+  flex-wrap: wrap;
+}
+.box-fonctionnalites{
+  width: 400px;
+  display: flex;
+  margin: 40px 20px;
+}
+.gauche-img{
+  font-size: 50px;
+  padding: 5px;
+}
+.droite-txt p:nth-child(1){
+  font-weight: 600;
+  font-size: 25px;
+}
+.droite-txt p:nth-child(2){
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.sous-titre-newsletter{
+  font-size: 27px;
+  text-align: center;
+  margin: 0 0 50px;
+}
+form{
+  width: 50%;
+  margin: 0 auto 200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+form input{
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 9999px;
+}
+form button{
+  padding: 15px;
+  width: 200px;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 9999px;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:700px) {
+form{
+  width: 90%;
+}
+form button{
+  width: 100px;
+}
+}

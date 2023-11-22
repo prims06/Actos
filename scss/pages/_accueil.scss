@@ -118,6 +118,8 @@ nav a:hover::after {
 //---------------------Container Global-----------------------------
 .container-global {
   padding-bottom: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .accueil {
@@ -376,7 +378,7 @@ nav a:hover::after {
   padding: 20px 50px;
   background: $main-violet;
   border-radius: 50px;
-  margin: 50px 0 0;
+  margin: 50px auto 0;
 }
 
 footer{
